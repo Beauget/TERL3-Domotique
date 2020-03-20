@@ -18,15 +18,16 @@ class StepMotor
     void begin();
 
     void steps(signed int amount);
-    
-    void forwardStep();
-    void backwardStep();
-    void step(signed char direction);
-    void stepById(int id);
+
 
   private:
     signed int currentStep;
     byte pins[PIN_AMOUNT];
+        
+    void forwardStep();
+    void backwardStep();
+    void step(signed char direction);
+    void stepById(int id);
 
     static const bool ENERGIZING_MATRIX[STEP_AMOUNT][PIN_AMOUNT];
 };
